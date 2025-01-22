@@ -9,6 +9,13 @@ updates:
     commit-message:
       prefix: ":dependabot: github-actions"
       include: "scope"
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    commit-message:
+      prefix: ":dependabot: docker"
+      include: "scope"
   - package-ecosystem: "pip"
     directory: "/"
     schedule:
