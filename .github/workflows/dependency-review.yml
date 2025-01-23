@@ -16,4 +16,4 @@ jobs:
     if: github.event.repository.private == false
     permissions:
       contents: read
-    uses: ministryofjustice/analytical-platform-airflow-github-actions/.github/workflows/shared-dependency-review.yml@99702f79ee97932a00fcd5f7d6f8eee0e37b8076 # v1.0.2
+    uses: ministryofjustice/analytical-platform-airflow-github-actions/.github/workflows/shared-dependency-review.yml@0f586fade607a2956ff99c372f759dd41b5c1357 # v1.1.0
