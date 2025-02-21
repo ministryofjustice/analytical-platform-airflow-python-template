@@ -13,4 +13,4 @@ jobs:
     permissions:
       contents: read
       pull-requests: write
-    uses: ministryofjustice/analytical-platform-airflow-github-actions/.github/workflows/shared-test-container.yml@f42f26a7cd2d8442ff2d41b656ae01292d0335e0 # v1.3.3
+    uses: ministryofjustice/analytical-platform-airflow-github-actions/.github/workflows/shared-test-container.yml@cd24da6c1e3f42d5153c37881d440ac4449d5e0b # v1.4.0
