@@ -1,4 +1,4 @@
-FROM ghcr.io/ministryofjustice/analytical-platform-airflow-python-base:1.12.0@sha256:f4e6b42430a08e3eeef7ae3b3429745f68827cff0c36b2e67e9b4e683696a9b7
+FROM ghcr.io/ministryofjustice/analytical-platform-airflow-python-base:1.14.0@sha256:e6b0859e770b45e3ce13656ca39a24cb60db8237bb0638c34c35a26eaf59ee83
 
 # Below is an example of how to use the base image
 
