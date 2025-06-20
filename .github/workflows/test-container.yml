@@ -14,4 +14,4 @@ jobs:
       contents: read
       id-token: write
       pull-requests: write
-    uses: ministryofjustice/analytical-platform-airflow-github-actions/.github/workflows/shared-test-container.yml@fe80a7bd4ad022fb14e50b94637baef2e564013c # v2.0.0
+    uses: ministryofjustice/analytical-platform-airflow-github-actions/.github/workflows/shared-test-container.yml@9efa0e01d0e12f1bc5bb19b55722553f5d2c84f8 # v2.2.0
