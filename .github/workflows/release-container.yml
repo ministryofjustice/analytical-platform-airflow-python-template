@@ -13,4 +13,4 @@ jobs:
     permissions:
       contents: read
       id-token: write
-    uses: ministryofjustice/analytical-platform-airflow-github-actions/.github/workflows/shared-release-container.yml@39e4c8e5bdde50a537934e2a29d9e3d02b5ca1ce # v2.2.1
+    uses: ministryofjustice/analytical-platform-airflow-github-actions/.github/workflows/shared-release-container.yml@66f019c33b5b70fa604c253a8d18034381361098 # v2.3.0
