@@ -38,6 +38,12 @@ Each ADR will follow the standard format with:
 - Decision
 - Consequences
 
+**Alternatives considered:**
+
+- `adr-viewer`: Generates a static website from ADRs with a web UI. Rejected because GitHub's native Markdown rendering provides sufficient readability without the overhead of generating and maintaining a separate website.
+- Original shell-based `adr-tools`: More features (TOC generation, graphing) but adds shell script dependency. Python-based tool is more consistent with data science workflows.
+- Manual Markdown files: No tooling dependency but lacks consistency and sequential numbering automation.
+
 ## Consequences
 
 **Positive:**
