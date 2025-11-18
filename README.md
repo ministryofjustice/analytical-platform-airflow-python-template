@@ -22,6 +22,55 @@ The repository comes with the following preset files:
 
 Once you've created your repository using this template, ensure the following steps:
 
+### Set Up Development Environment
+
+1. **Create a virtual environment** (in your project directory):
+
+   ```bash
+   python3 -m venv venv
+   ```
+
+   Add `venv` to your `.gitignore` file (already included in this template).
+
+2. **Activate the virtual environment**:
+
+   ```bash
+   source venv/bin/activate  # On macOS/Linux
+   # or
+   venv\Scripts\activate  # On Windows
+   ```
+
+   You'll see `(venv)` in your terminal prompt when activated.
+
+3. **Install development dependencies**:
+
+   ```bash
+   pip install -r requirements-dev.txt
+   ```
+
+4. **Install pre-commit hooks** (for code quality):
+
+   ```bash
+   pre-commit install
+   ```
+
+5. **Install project dependencies** (when you have a `requirements.txt`):
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+6. **Record your dependencies**:
+
+   When you add new packages, update the requirements file:
+
+   ```bash
+   pip freeze > requirements.txt
+   git add requirements.txt
+   ```
+
+**Note:** You may need to delete the `.bash_aliases` file (`rm ~/.bash_aliases`) from your home directory for pip to work properly within a virtual environment.
+
 ### Update README
 
 Edit this README.md file to document your project accurately. Take the time to create a clear, engaging, and informative README.md file. Include information like what your project does, how to install and run it, how to contribute, and any other pertinent details.
