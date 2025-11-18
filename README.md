@@ -17,6 +17,25 @@ The repository comes with the following preset files:
 - Dependabot configuration
 - Dockerfile
 - MIT License
+- Pre-commit hooks configuration (`.pre-commit-config.yaml`)
+- Development dependencies (`requirements-dev.txt`)
+- Architecture Decision Records (`docs/adr/`)
+
+## Code Quality
+
+This template includes pre-commit hooks for automated code quality checks. The hooks cover:
+
+- **Python**: Black formatting, Flake8 linting, Bandit security checks
+- **R**: styler formatting, lintr linting
+- **SQL**: SQLFluff linting and formatting
+- **Notebooks**: nbstripout to remove outputs
+- **General**: trailing whitespace, file size limits, secrets detection
+
+After setting up your environment, the hooks will run automatically on each commit. You can also run them manually:
+
+```bash
+pre-commit run --all-files
+```
 
 ## Setup Instructions
 
