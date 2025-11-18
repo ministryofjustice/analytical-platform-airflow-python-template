@@ -61,6 +61,8 @@ adr-config
 
 ### What decisions should have an ADR?
 
+
+
 Document decisions that:
 
 - Affect the project structure or architecture
@@ -86,6 +88,12 @@ Examples for this template:
 
 ## Examples
 
+> [!NOTE]
+> ADRs are not commits.
+> If it is big picture and architectural, it needs an ADR.
+> Routine code maintenance or feature additions do not need ADRs.
+> Commit messages and ADR titles should sound different.
+
 ### Good ADR titles
 
 - "Use Black for Python code formatting"
@@ -95,6 +103,7 @@ Examples for this template:
 
 ### Poor ADR titles
 
+ 
 - "Fix bug in data processing" (too specific, not architectural)
 - "Update dependencies" (routine maintenance)
 - "Add comments to code" (implementation detail)
