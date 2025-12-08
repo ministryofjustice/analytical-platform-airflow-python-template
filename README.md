@@ -43,6 +43,57 @@ This template provides a robust foundation for data science projects:
 - **📚 Comprehensive Documentation**: README templates, ADR examples, and test documentation
 - **🔄 PR and issue templates** to match common data science ways of working
 
+## Project Structure
+
+This template follows a standard data science project structure:
+
+```text
+project-root/
+├── .github/              # GitHub workflows, issue templates, PR templates
+├── data/                 # Data files (gitignored)
+│   ├── raw/             # Original, immutable data
+│   ├── processed/       # Cleaned, transformed data
+│   └── external/        # Third-party data sources
+├── docs/                # Documentation and architecture decision records
+│   └── adr/            # Architecture Decision Records
+├── models/              # Trained models, model predictions, summaries (gitignored)
+├── notebooks/           # Jupyter notebooks for exploration and analysis
+├── references/          # Data dictionaries, manuals, explanatory materials
+├── reports/             # Generated analysis outputs (gitignored)
+│   └── figures/        # Graphics and visualizations for reports
+├── src/                 # Source code for the project
+│   ├── __init__.py
+│   ├── data/           # Scripts to download or generate data
+│   ├── features/       # Feature engineering code
+│   ├── models/         # Model training, prediction, and evaluation
+│   │   ├── train.py
+│   │   ├── predict.py
+│   │   └── evaluate.py
+│   └── visualization/  # Scripts for exploratory and results visualization
+├── tests/               # Test suite
+│   ├── unit/           # Unit tests
+│   ├── integration/    # Integration tests
+│   └── e2e/            # End-to-end tests
+├── .gitignore          # Specifies intentionally untracked files to ignore
+├── .pre-commit-config.yaml  # Pre-commit hooks configuration
+├── Dockerfile          # Docker container definition
+├── requirements.txt    # Python dependencies
+└── README.md           # Project overview and setup instructions
+```
+
+### Directory Purposes
+
+- **data/**: Store all data files here. This directory is gitignored to prevent accidentally committing data. Use subdirectories to organize by data stage (raw, processed, external).
+- **models/**: Store trained models and model artifacts. Gitignored by default as models can be large.
+- **notebooks/**: Jupyter notebooks for exploration, analysis, and reporting. Name notebooks with numbers for ordering (e.g., `01-data-exploration.ipynb`).
+- **references/**: Documentation like data dictionaries, project briefs, or reference materials.
+- **reports/**: Generated outputs like HTML reports, PDFs, or presentations. Gitignored to avoid committing large files.
+- **src/**: Production-ready source code. Organize by function (data processing, features, models, visualization).
+- **tests/**: Automated tests following the three-tier structure (unit, integration, e2e).
+
+> [!TIP]
+> When starting a new project, create your module structure inside `src/` (e.g., `src/fraud_detection/`) to keep code organized and importable.
+
 ### Code Standards and Quality
 
 This template includes pre-commit hooks for automated code quality checks. The hooks cover:

@@ -1,0 +1,24 @@
+# Models
+
+This directory stores trained models, model predictions, and model summaries.
+
+## Contents
+
+- Serialized models (`.pkl`, `.joblib`, `.h5`, etc.)
+- Model metadata and parameters
+- Model performance metrics
+- Predictions and model outputs
+
+## Usage
+
+```python
+# Save a trained model
+import joblib
+joblib.dump(model, 'models/my_model.pkl')
+
+# Load a model
+model = joblib.load('models/my_model.pkl')
+```
+
+> [!NOTE]
+> Model files are gitignored by default. Use model registries (MLflow, W&B) or artifact storage for production models.

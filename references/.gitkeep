@@ -1,0 +1,23 @@
+# References
+
+Reference materials, data dictionaries, manuals, and other explanatory documentation.
+
+## Contents
+
+- Data dictionaries and schema definitions
+- Project briefs and requirements documents
+- Research papers and literature
+- Domain-specific documentation
+- API documentation for external services
+
+## Organization
+
+Create subdirectories as needed:
+
+```text
+references/
+├── data-dictionaries/
+├── project-docs/
+├── literature/
+└── api-specs/
+```

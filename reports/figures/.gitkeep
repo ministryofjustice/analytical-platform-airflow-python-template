@@ -1,0 +1,22 @@
+# Figures
+
+Graphics and visualizations for reports and presentations.
+
+Store generated plots, charts, and diagrams here.
+
+## Usage
+
+```python
+import matplotlib.pyplot as plt
+
+# Create visualization
+plt.figure(figsize=(10, 6))
+plt.plot(data)
+plt.title("Analysis Results")
+
+# Save figure
+plt.savefig('reports/figures/results_plot.png', dpi=300, bbox_inches='tight')
+```
+
+> [!TIP]
+> Use high DPI (300) for publication-quality figures.

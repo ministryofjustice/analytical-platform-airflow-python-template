@@ -1,0 +1,23 @@
+# Reports
+
+Generated analysis outputs including HTML, PDF, LaTeX documents, and other report formats.
+
+## Contents
+
+- Analysis reports
+- Presentations
+- Generated documentation
+- Executive summaries
+
+> [!NOTE]
+> Report files are gitignored by default. Commit final reports to a releases branch or store in a documentation system.
+
+## Generating Reports
+
+```bash
+# Example: Generate HTML report from notebook
+jupyter nbconvert --to html notebooks/01-analysis.ipynb --output ../reports/analysis-report.html
+
+# Example: Generate PDF report
+jupyter nbconvert --to pdf notebooks/01-analysis.ipynb --output ../reports/analysis-report.pdf
+```

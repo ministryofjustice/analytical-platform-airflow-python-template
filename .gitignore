@@ -51,8 +51,39 @@ wheels/
 # Checksums
 *.sha256
 
-# Data files (add specific patterns as needed)
-# *.csv
-# *.xlsx
-# *.parquet
-# data/
+# Data files - common formats
+*.csv
+*.xlsx
+*.xls
+*.parquet
+*.feather
+*.hdf5
+*.h5
+*.pkl
+*.pickle
+*.db
+*.sqlite
+*.sqlite3
+*.dta
+*.sav
+*.rds
+*.rda
+*.RData
+
+# Data directories (except .gitkeep files)
+data/*
+!data/.gitkeep
+!data/*/
+data/*/*
+!data/*/.gitkeep
+
+# Models directory (except .gitkeep)
+models/*
+!models/.gitkeep
+
+# Reports directory (except .gitkeep)
+reports/*
+!reports/.gitkeep
+!reports/figures/
+reports/figures/*
+!reports/figures/.gitkeep
