@@ -29,7 +29,7 @@ Data science projects have unique needs compared to traditional software project
 
 ## Decision
 
-We will adopt a directory structure inspired by [cookiecutter-data-science](https://drivendata.github.io/cookiecutter-data-science/), a widely-recognized standard in the DS community, however we will use a static version rather than a `cookiecutter` template to simplify usage.
+We will adopt a directory structure inspired by [cookiecutter-data-science](https://drivendata.github.io/cookiecutter-data-science/), a widely-recognised standard in the DS community, however we will use a static version rather than a `cookiecutter` template to simplify usage.
 
 ```text
 project-root/
@@ -77,8 +77,7 @@ project-root/
 - **Package installation**: Requires `pip install -e .` or PYTHONPATH manipulation to use `src/` imports
 - **Maintenance overhead**: More directories and READMEs to keep updated
 - **Not one-size-fits-all**: Some projects may need to deviate from the structure
-    - Users can adapt or simplify the structure for their specific needs
-
+  - Users can adapt or simplify the structure for their specific needs
 
 **Neutral:**
 
@@ -87,6 +86,7 @@ project-root/
 ## Alternatives Considered
 
 1. **Custom MoJ-specific structure**: Design our own from scratch
+
    - **Rejected**: Cookiecutter-data-science is already well-established and familiar to DS practitioners
 
 2. **Minimal structure**: Only create directories users explicitly request

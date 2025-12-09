@@ -83,16 +83,16 @@ project-root/
 
 ### Directory Purposes
 
-- **data/**: Store all data files here. This directory is gitignored to prevent accidentally committing data. Use subdirectories to organize by data stage (raw, processed, external).
+- **data/**: Store all data files here. This directory is gitignored to prevent accidentally committing data. Use subdirectories to organise by data stage (raw, processed, external).
 - **models/**: Store trained models and model artifacts. Gitignored by default as models can be large.
 - **notebooks/**: Jupyter notebooks for exploration, analysis, and reporting. Name notebooks with numbers for ordering (e.g., `01-data-exploration.ipynb`).
 - **references/**: Documentation like data dictionaries, project briefs, or reference materials.
 - **reports/**: Generated outputs like HTML reports, PDFs, or presentations. Gitignored to avoid committing large files.
-- **src/**: Production-ready source code. Organize by function (data processing, features, models, visualization).
+- **src/**: Production-ready source code. Organise by function (data processing, features, models, visualization).
 - **tests/**: Automated tests following the three-tier structure (unit, integration, e2e).
 
 > [!TIP]
-> When starting a new project, create your module structure inside `src/` (e.g., `src/fraud_detection/`) to keep code organized and importable.
+> When starting a new project, create your module structure inside `src/` (e.g., `src/fraud_detection/`) to keep code organised and importable.
 
 ### Code Standards and Quality
 
