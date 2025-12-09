@@ -13,20 +13,17 @@ A comprehensive template repository for data science projects on the Analytical 
 
 1. Click "Use this template" → Create repository
 2. Clone: `git clone https://github.com/moj-analytical-services/your-repo-name.git`
-3. Follow [post-clone checklist](#post-clone-checklist) below
+3. Follow [post-clone checklist](#post-clone-checklist) below. More info in [Setup Instructions](#setup-instructions).
 
 ## Post-Clone Checklist
 
 - [ ] Create and activate virtual environment
-- [ ] Install dependencies: `pip install -r requirements-dev.txt`
 - [ ] Install pre-commit hooks: `pre-commit install`
 - [ ] Update this README with project details
 - [ ] Update badge URLs in README
 - [ ] Set GitHub repository description
 - [ ] Grant team permissions (one Admin minimum)
 - [ ] Review [MoJ GitHub standards](https://user-guide.operations-engineering.service.justice.gov.uk/documentation/information/mojrepostandards.html)
-- [ ] Configure Dependabot for your stack
-- [ ] (Optional) Update CODEOWNERS file
 
 ## Features
 
@@ -44,10 +41,40 @@ This template provides a robust foundation for data science projects:
 
 ## Project Structure
 
+```text
+├── data/             # Data files (gitignored)
+│   ├── raw/          # Original data
+│   ├── processed/    # Cleaned data
+│   └── external/     # Third-party data
+├── docs/             # Documentation and ADRs
+├── models/           # Trained models (gitignored)
+├── notebooks/
+├── references/       # Data dictionaries, manuals
+├── reports/          # Generated outputs (gitignored)
+│   └── figures/
+├── scripts/          # Executable scripts
+├── src/              # Reusable source code
+│   ├── data/         # Data processing
+│   ├── features/     # Feature engineering
+│   ├── models/       # Training and prediction
+│   └── visualization/# Plotting utilities
+└── tests/
+    ├── unit/
+    ├── integration/
+    └── e2e/          # End-to-end tests
+```
 
+See individual directories for detailed READMEs. Key points:
+
+- **data/**, **models/**, **reports/**: Gitignored to prevent committing large files
+- **src/**: Installable as package with `pip install -e .` (see [src/README.md](src/README.md))
+- **scripts/**: One-off executables that use `src/` code (see [scripts/README.md](scripts/README.md))
+- **notebooks/**: Use numbered prefixes (e.g., `01-exploration.ipynb`)
 
 > [!TIP]
 > When starting a new project, create your module structure inside `src/` (e.g., `src/fraud_detection/`) to keep code organised and importable.
+
+![alt text](docs/images/Project-Workflow.png)
 
 ### Code Standards and Quality
 
