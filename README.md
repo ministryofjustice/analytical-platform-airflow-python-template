@@ -11,23 +11,22 @@ A comprehensive template repository for data science projects on the Analytical 
 
 ## Quick Start
 
-1. **Create your repository** from this template:
-   - Click the green "Use this template" button at the top of this repository
-   - Select "Create a new repository"
-   - Name your repository and choose visibility settings
+1. Click "Use this template" → Create repository
+2. Clone: `git clone https://github.com/moj-analytical-services/your-repo-name.git`
+3. Follow [post-clone checklist](#post-clone-checklist) below
 
-2. **Clone your new repository**:
+## Post-Clone Checklist
 
-   ```bash
-   git clone https://github.com/moj-analytical-services/your-repo-name.git
-   cd your-repo-name
-   ```
-
-3. **Set up your development environment**. Follow the [Setup Instructions](#setup-instructions) below
-
-4. **Update the README** to reflect your project
-
-5. **Start building!** Follow the Setup Instructions and begin developing your data science project.
+- [ ] Create and activate virtual environment
+- [ ] Install dependencies: `pip install -r requirements-dev.txt`
+- [ ] Install pre-commit hooks: `pre-commit install`
+- [ ] Update this README with project details
+- [ ] Update badge URLs in README
+- [ ] Set GitHub repository description
+- [ ] Grant team permissions (one Admin minimum)
+- [ ] Review [MoJ GitHub standards](https://user-guide.operations-engineering.service.justice.gov.uk/documentation/information/mojrepostandards.html)
+- [ ] Configure Dependabot for your stack
+- [ ] (Optional) Update CODEOWNERS file
 
 ## Features
 
