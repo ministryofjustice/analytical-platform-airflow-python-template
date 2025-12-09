@@ -70,9 +70,10 @@ wheels/
 *.rda
 *.RData
 
-# Data directories (except .gitkeep files)
+# Data directories (except .gitkeep files and READMEs)
 data/*
 !data/.gitkeep
+!data/README.md
 !data/*/
 data/*/*
 !data/*/.gitkeep
