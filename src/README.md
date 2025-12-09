@@ -11,7 +11,7 @@ Code that:
 - Is imported and reused across notebooks and scripts
 - Contains core business logic and algorithms
 - Should be tested with unit/integration tests
-- Might be deployed to production
+- Might be deployed to production and airflow
 
 **Examples:**
 
