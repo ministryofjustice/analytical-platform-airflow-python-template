@@ -69,7 +69,7 @@ See individual directories for detailed READMEs. Key points:
 - **data/**, **models/**, **reports/**: Gitignored to prevent committing large or sensitive files
 - **src/**: Installable as package with `pip install -e .` (see [src/README.md](src/README.md))
 - **scripts/**: One-off executables that use `src/` code (see [scripts/README.md](scripts/README.md))
-- **notebooks/**: Use numbered prefixes (e.g., `01-exploration.ipynb`)
+- **notebooks/**: Use numbered prefixes with snake_case (e.g., `01_data_exploration.ipynb`)
 
 > [!TIP]
 > When starting a new project, create your module structure inside `src/` (e.g., `src/fraud_detection/`) to keep code organised and importable.
