@@ -225,17 +225,7 @@ Assign permissions to the appropriate Ministry of Justice teams. Ensure at least
 
 ### Read about the GitHub repository standards
 
-Familiarise yourself with the [Ministry of Justice GitHub Repository Standards](https://user-guide.operations-engineering.service.justice.gov.uk/documentation/information/mojrepostandards.html). These standards ensure consistency, maintainability, and best practices across all our repositories.
-
-Please read and understand these standards thoroughly and enable them when you feel comfortable.
-
-### Modify the GitHub Standards Badge
-
-Once you've ensured that all the [GitHub Repository Standards](https://user-guide.operations-engineering.service.justice.gov.uk/documentation/information/mojrepostandards.html) have been applied to your repository, it's time to update the Ministry of Justice (MoJ) Compliance Badge located in the README file.
-
-The badge demonstrates that your repository is compliant with MoJ's standards. Please follow these [instructions](https://user-guide.operations-engineering.service.justice.gov.uk/documentation/information/add-repo-badge.html) to modify the badge URL to reflect the status of your repository correctly.
-
-**Please note** the badge will not function correctly if your repository is internal or private. In this case, you may remove the badge from your README.
+Familiarise yourself with the [GDS Way](https://gds-way.digital.cabinet-office.gov.uk). These standards ensure consistency, maintainability, and best practices across all our repositories.
 
 ### Manage Outside Collaborators
 
@@ -255,7 +245,7 @@ If your repository is private with no GitHub Advanced Security license, remove t
 
 ### Code of Conduct
 
-This project follows the [Ministry of Justice's Code of Conduct](https://user-guide.operations-engineering.service.justice.gov.uk/documentation/information/mojrepostandards.html). Please be respectful and professional in all interactions.
+This project follows the [Ministry of Justice's Code of Conduct](https://github.com/ministryofjustice/.github/blob/main/CODE_OF_CONDUCT.md). Please be respectful and professional in all interactions.
 
 ## License
 
