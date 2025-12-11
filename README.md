@@ -66,7 +66,7 @@ This template provides a robust foundation for data science projects:
 
 See individual directories for detailed READMEs. Key points:
 
-- **data/**, **models/**, **reports/**: Gitignored to prevent committing large files
+- **data/**, **models/**, **reports/**: Gitignored to prevent committing large or sensitive files
 - **src/**: Installable as package with `pip install -e .` (see [src/README.md](src/README.md))
 - **scripts/**: One-off executables that use `src/` code (see [scripts/README.md](scripts/README.md))
 - **notebooks/**: Use numbered prefixes (e.g., `01-exploration.ipynb`)
