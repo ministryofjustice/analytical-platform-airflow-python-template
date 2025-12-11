@@ -11,23 +11,19 @@ A comprehensive template repository for data science projects on the Analytical 
 
 ## Quick Start
 
-1. **Create your repository** from this template:
-   - Click the green "Use this template" button at the top of this repository
-   - Select "Create a new repository"
-   - Name your repository and choose visibility settings
+1. Click "Use this template" → Create repository
+2. Clone: `git clone https://github.com/moj-analytical-services/your-repo-name.git`
+3. Follow [post-clone checklist](#post-clone-checklist) below. More info in [Setup Instructions](#setup-instructions).
 
-2. **Clone your new repository**:
+## Post-Clone Checklist
 
-   ```bash
-   git clone https://github.com/moj-analytical-services/your-repo-name.git
-   cd your-repo-name
-   ```
-
-3. **Set up your development environment**. Follow the [Setup Instructions](#setup-instructions) below
-
-4. **Update the README** to reflect your project and [correct the update badge links](#modify-the-github-standards-badge)
-
-5. **Start building!**
+- [ ] Create and activate virtual environment
+- [ ] Install pre-commit hooks: `pre-commit install`
+- [ ] Update this README with project details
+- [ ] Update badge URLs in README
+- [ ] Set GitHub repository description
+- [ ] Grant team permissions (one Admin minimum)
+- [ ] Review [MoJ GitHub standards](https://github-community.service.justice.gov.uk/repository-standards/guidance)
 
 ## Features
 
@@ -43,9 +39,46 @@ This template provides a robust foundation for data science projects:
 - **📚 Comprehensive Documentation**: README templates, ADR examples, and test documentation
 - **🔄 PR and issue templates** to match common data science ways of working
 
+## Project Structure
+
+```text
+├── data/             # Data files (gitignored)
+│   ├── raw/          # Original data
+│   ├── processed/    # Cleaned data
+│   └── external/     # Third-party data
+├── docs/             # Documentation and ADRs
+├── models/           # Trained models (gitignored)
+├── notebooks/
+├── references/       # Data dictionaries, manuals
+├── reports/          # Generated outputs (gitignored)
+│   └── figures/
+├── scripts/          # Executable scripts
+├── src/              # Reusable source code
+│   ├── data/         # Data processing
+│   ├── features/     # Feature engineering
+│   ├── models/       # Training and prediction
+│   └── visualization/# Plotting utilities
+└── tests/
+    ├── unit/
+    ├── integration/
+    └── e2e/          # End-to-end tests
+```
+
+See individual directories for detailed READMEs. Key points:
+
+- **data/**, **models/**, **reports/**: Gitignored to prevent committing large or sensitive files
+- **src/**: Installable as package with `pip install -e .` (see [src/README.md](src/README.md))
+- **scripts/**: One-off executables that use `src/` code (see [scripts/README.md](scripts/README.md))
+- **notebooks/**: Use numbered prefixes with snake_case (e.g., `01_data_exploration.ipynb`)
+
+> [!TIP]
+> When starting a new project, create your module structure inside `src/` (e.g., `src/fraud_detection/`) to keep code organised and importable.
+
+![alt text](docs/images/Project-Workflow.png)
+
 ### Code Standards and Quality
 
-This template includes pre-commit hooks for automated code quality checks. The hooks cover:
+This template includes pre-commit hooks for automated code quality checks. [The hooks](https://github.com/moj-analytical-services/data-science-template/blob/main/.pre-commit-config.yaml) cover:
 
 - **Python**: Black formatting, Flake8 linting, Bandit security checks
 - **R**: styler formatting, lintr linting (requires R packages: `install.packages(c("styler", "lintr"))`)
@@ -56,33 +89,20 @@ This template includes pre-commit hooks for automated code quality checks. The h
 After setting up your environment, the hooks will run automatically on each commit. You can also run them manually:
 
 ```bash
-pre-commit run --all-files
+pre-commit run --all-files  # Run manually
 ```
 
-### Testing
-
-The template includes a three-tier testing structure:
-
-- **Unit Tests** (`tests/unit/`): Test individual functions and components in isolation
-- **Integration Tests** (`tests/integration/`): Test how components work together
-- **End-to-End Tests** (`tests/e2e/`): Test complete workflows from start to finish
-
-Each test directory contains a README with specific guidance. Example tests are provided for both Python (pytest) and R (testthat).
-
-**Run Python tests:**
+**Testing:**
 
 ```bash
-pytest tests/
+pytest tests/              # Python tests (unit, integration, e2e)
 ```
-
-**Run R tests:**
 
 ```R
-# In R console
-testthat::test_dir("tests/unit")
+testthat::test_dir("tests/unit")  # R tests
 ```
 
-See the [tests README](tests/README.md) for more details on the testing strategy.
+See [tests/README.md](tests/README.md) for details.
 
 ## Setup Instructions
 
@@ -135,9 +155,8 @@ We are aligned with the [analytical platform's guidance](https://user-guide.clou
    ```bash
    pip freeze > requirements.txt
    git add requirements.txt
+   ...
    ```
-
-**Note:** You may need to delete the `.bash_aliases` file (`rm ~/.bash_aliases`) from your home directory for pip to work properly within a virtual environment.
 
 ### Set Up R Development Environment (Optional)
 
@@ -190,11 +209,15 @@ If you're working with R:
 
 Edit this README.md file to document your project accurately. Take the time to create a clear, engaging, and informative README.md file. Include information like what your project does, how to install and run it, how to contribute, and any other pertinent details.
 
+Also make sure the badge urls are correct for your repository, e.g.:
+
+```markdown
+[![Pre-commit](https://github.com/moj-analytical-services/YOUR-REPO-HERE/actions/workflows/pre-commit.yml/badge.svg)](https://github.com/moj-analytical-services/YOUR-REPO-HERE/actions/workflows/pre-commit.yml)
+```
+
 ### Update repository description
 
 After you've created your repository, GitHub provides a brief description field that appears on the top of your repository's main page. This is a summary that gives visitors quick insight into the project. Using this field to provide a succinct overview of your repository is highly recommended.
-
-This description and your README.md will be one of the first things people see when they visit your repository. It's a good place to make a strong, concise first impression. Remember, this is often visible in search results on GitHub and search engines, so it's also an opportunity to help people discover your project.
 
 ### Grant Team Permissions
 
@@ -229,27 +252,6 @@ Adapt the dependabot.yml file to match your project's [dependency manager](https
 ### Dependency Review
 
 If your repository is private with no GitHub Advanced Security license, remove the `.github/workflows/dependency-review.yml` file.
-
-## Contributing
-
-We welcome contributions and suggestions! Here's how you can help:
-
-1. **Report Issues**: Found a bug or have a feature request? [Open an issue](https://github.com/moj-analytical-services/data-science-template/issues/new/choose)
-
-2. **Suggest Improvements**: Have ideas for improving this template? Create an issue with the "enhancement" label
-
-3. **Submit Pull Requests**:
-   - Fork the repository
-   - Create a feature branch (`git checkout -b feature/improvement`)
-   - Make your changes and commit (`git commit -am 'Add new feature'`)
-   - Push to the branch (`git push origin feature/improvement`)
-   - Open a Pull Request
-
-4. **Document Decisions**: For significant architectural changes, create an [Architecture Decision Record](docs/adr/README.md) using:
-
-   ```bash
-   adr-new "Your decision title"
-   ```
 
 ### Code of Conduct
 
