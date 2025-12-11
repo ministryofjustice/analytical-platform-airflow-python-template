@@ -71,12 +71,9 @@ wheels/
 *.RData
 
 # Data directories (except .gitkeep files and READMEs)
-data/*
-!data/.gitkeep
-!data/README.md
-!data/*/
-data/*/*
-!data/*/.gitkeep
+data/**/* # Ignore all files in data directory recursively
+!data/**/*.gitkeep # But keep all .gitkeep files
+!data/**/README.md # And keep all README.md files
 
 # Models directory (except .gitkeep)
 models/*
