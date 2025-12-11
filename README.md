@@ -209,7 +209,7 @@ If you're working with R:
 
 Edit this README.md file to document your project accurately. Take the time to create a clear, engaging, and informative README.md file. Include information like what your project does, how to install and run it, how to contribute, and any other pertinent details.
 
-Also make sure the badge urls are correct for your repository:
+Also make sure the badge urls are correct for your repository, e.g.:
 
 ```markdown
 [![Pre-commit](https://github.com/moj-analytical-services/YOUR-REPO-HERE/actions/workflows/pre-commit.yml/badge.svg)](https://github.com/moj-analytical-services/YOUR-REPO-HERE/actions/workflows/pre-commit.yml)
