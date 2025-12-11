@@ -1,6 +1,6 @@
 # Data Directory
 
- **All data files are gitignored** to prevent accidentally committing sensitive or large datasets. Whilst you may choose to work on folders on S3, this structure helps organse data locally.
+ **All data files are gitignored** to prevent accidentally committing sensitive or large datasets. Whilst you may choose to work on folders on S3, this structure helps organise data locally.
 
 ## Structure
 
