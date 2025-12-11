@@ -154,7 +154,7 @@ We are aligned with the [analytical platform's guidance](https://user-guide.clou
 
    ```bash
    pip freeze > requirements.txt
-   git add requirements.
+   git add requirements.txt
    ...
    ```
 
