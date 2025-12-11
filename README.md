@@ -23,7 +23,7 @@ A comprehensive template repository for data science projects on the Analytical 
 - [ ] Update badge URLs in README
 - [ ] Set GitHub repository description
 - [ ] Grant team permissions (one Admin minimum)
-- [ ] Review [MoJ GitHub standards](https://user-guide.operations-engineering.service.justice.gov.uk/documentation/information/mojrepostandards.html)
+- [ ] Review [MoJ GitHub standards](https://github-community.service.justice.gov.uk/repository-standards/guidance)
 
 ## Features
 
