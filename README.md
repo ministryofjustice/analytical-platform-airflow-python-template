@@ -17,6 +17,7 @@ A comprehensive template repository for data science projects on the Analytical 
 
 ## Post-Clone Checklist
 
+- [ ] **Complete initial ethics scan** (see [Ethics & SAFE-D Framework](#ethics--safe-d-framework))
 - [ ] Create and activate virtual environment
 - [ ] Install pre-commit hooks: `pre-commit install`
 - [ ] Update this README with project details
@@ -103,6 +104,89 @@ testthat::test_dir("tests/unit")  # R tests
 ```
 
 See [tests/README.md](tests/README.md) for details.
+
+## Ethics & SAFE-D Framework
+
+> [!IMPORTANT]
+> **MANDATORY REQUIREMENT**: All data science and AI projects **must** complete the [MoJ AI & Data Science Ethics Framework Process](https://justiceuk.sharepoint.com/sites/MoJAIDataEthicsHub/SitePages/Governance-Process.aspx?csf=1&web=1&e=GrR7F5). This is not optional guidance; it is a required process for responsible development of data-driven technologies.
+
+The framework is built around the **SAFE-D Principles**:
+
+### SAFE-D Principles
+
+| Principle | Description | Key Considerations |
+|-----------|-------------|--------------------|
+| **S**ustainability | Ensure safe, reliable outputs and practices to mitigate long-term risk | Safety, security, robustness, reliability, accuracy & performance |
+| **A**ccountability | Implement transparent processes and communication channels | Traceability, answerability, auditability, accessibility, clear data provenance |
+| **F**airness | Prevent discrimination and balance rights/interests of all parties | Bias mitigation, diversity & inclusivity, non-discrimination, equality |
+| **E**xplainability | Support ability to explain technology behavior within systems | Interpretability, responsible model selection, accessible rationale, user training, reproducibility |
+| **D**ata Responsibility | Consider data quality, relevance, integrity, and compliance | Responsible data management, adequacy of quantity & quality, source integrity, timeliness, legal compliance |
+
+### Using the Framework
+
+> [!CAUTION]
+> **START HERE: Conduct an initial ethics scan before any development work begins.** This scan should identify potential ethical risks, determine which SAFE-D principles are most relevant, and establish your ethics documentation structure.
+
+The framework follows a **Project Lifecycle Model** with three phases:
+
+#### 1. Design Phase
+**Start immediately at project inception**
+
+**Key Activities:**
+- **Initial Ethics Scan** (MANDATORY FIRST STEP)
+- SAFE-D Identification Workshop Exercise
+- Litmus Test
+- Stakeholder Engagement Worksheet
+- Additional activities where relevant
+
+#### 2. Development Phase
+**Key Activities:**
+- SAFE-D Reflection Workshop Exercise
+- **Development Phase Questionnaire** (required)
+- Stakeholder Engagement Worksheet
+- Additional activities where relevant
+
+#### 3. Deployment Phase
+**Key Activities:**
+- SAFE-D Assurance Workshop Exercise
+- **Deployment Phase Questionnaire** (required)
+- Stakeholder Engagement Worksheet
+- Additional activities where relevant
+
+> [!WARNING]
+> **MANDATORY: You must complete all phase questionnaires and conduct a final ethics sense check before deployment.** Projects cannot proceed to deployment without completed Development and Deployment Phase Questionnaires. These are not suggestions—they are required checkpoints to ensure SAFE-D principles have been properly considered and documented.
+
+**Applying SAFE-D Principles:**
+
+- **Identify**: Determine which principles apply to your project
+- **Weigh**: Assess which principles are most important for your goals
+- **Specify**: Use core attributes to clarify what each principle means for your project
+- **Revise**: Repeat the process as needed with stakeholder engagement
+- **Implement**: Carry out actions and continuously monitor effectiveness
+
+> [!IMPORTANT]
+> SAFE-D principles are **goals for ethical discussion**, not rigid rules. They guide choices and actions without limiting them. Ethics is iterative—revisit this framework throughout your project lifecycle.
+
+**Required Documentation:**
+
+You **must** create and maintain the following:
+- `docs/ethics/` directory for all ethics documentation
+- Decision log recording all ethical considerations and choices
+- Stakeholder engagement records for each project phase
+- Completed Development Phase Questionnaire before model finalization
+- Completed Deployment Phase Questionnaire before system deployment
+- Final ethics sense check sign-off
+- Documentation of how each SAFE-D principle applies to your project
+
+**Failure to complete these requirements may prevent project deployment.**
+
+**Quick Links:**
+- 📋 [Initial Ethics Scan Form](https://forms.office.com/Pages/ResponsePage.aspx?id=KEeHxuZx_kGp4S6MNndq2BVHD6pyd0hHqgn8qzKRvG5UQVMyR0ZYUDQ2SUg2VjJGSzZFUEhKSDYzTC4u)
+- 🏠 [MoJ AI & Data Ethics Hub](https://justiceuk.sharepoint.com/sites/MoJAIDataEthicsHub) (SharePoint)
+- 📚 [Case Study Library](https://justiceuk.sharepoint.com/sites/MoJAIDataEthicsHub/SitePages/Case-Study-Library(1).aspx)
+- 📖 [Full Framework Documentation](https://www.gov.uk/government/publications/ministry-of-justice-ai-and-data-science-ethics-framework)
+
+For detailed guidance, see [CONTRIBUTING.md](CONTRIBUTING.md#ethical-considerations).
 
 ## Setup Instructions
 
