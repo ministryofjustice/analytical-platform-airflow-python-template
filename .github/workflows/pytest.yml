@@ -12,19 +12,13 @@ jobs:
         with:
           python-version: "3.13"
 
-      - name: Cache venv
-        id: cache-venv
-        uses: actions/cache@v4
+      - uses: actions/setup-python@v5
         with:
-          path: venv
-          key: venv-${{ runner.os }}-${{ hashFiles('requirements.txt') }}-${{ hashFiles('requirements-dev.txt') }}
-          restore-keys: |
-            venv-${{ runner.os }}-
+          python-version: "3.12"
+          cache: "pip"
 
-      - name: Create venv and install dependencies
+      - name: Install dependencies
         run: |
-          python -m venv venv
-          source venv/bin/activate
           pip install --upgrade pip
           pip install pytest pytest-cov
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
@@ -32,5 +26,4 @@ jobs:
 
       - name: Run unit tests
         run: |
-          source venv/bin/activate
           pytest tests/unit/ --verbose
