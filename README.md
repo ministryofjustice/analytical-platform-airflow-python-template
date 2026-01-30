@@ -17,6 +17,7 @@ A comprehensive template repository for data science projects on the Analytical 
 
 ## Post-Clone Checklist
 
+- [ ] **Complete initial ethics scan** (see [Ethics & SAFE-D Framework](#ethics--safe-d-framework))
 - [ ] Create and activate virtual environment
 - [ ] Install pre-commit hooks: `pre-commit install`
 - [ ] Update this README with project details
@@ -102,7 +103,16 @@ pytest tests/              # Python tests (unit, integration, e2e)
 testthat::test_dir("tests/unit")  # R tests
 ```
 
-See [tests/README.md](tests/README.md) for details.
+## Playbook
+
+We use the [MoJ Data Science and AI Playbook](https://justiceuk.sharepoint.com/:x:/s/DataEngineeringDataScience/IQBDMxjlHr8lS7_RCPgEvjuIASQy37cBpga9N6B3nGMsyEw?e=dRsrNw) to guide projects through key stages.
+
+## Ethics & SAFE-D Framework
+
+> [!IMPORTANT]
+> **MANDATORY REQUIREMENT**: All data science and AI projects **must** complete the [MoJ AI & Data Science Ethics Framework Process](https://justiceuk.sharepoint.com/sites/MoJAIDataEthicsHub/SitePages/Governance-Process.aspx?csf=1&web=1&e=GrR7F5). This is not optional guidance; it is a required process for responsible development of data-driven technologies.
+
+For detailed guidance, see [CONTRIBUTING.md](CONTRIBUTING.md#ethical-considerations).
 
 ## Setup Instructions
 
