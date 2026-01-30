@@ -54,7 +54,6 @@ You should consult this playbook as you go through your project.
 **Required Documentation:**
 
 You **must** create and maintain the following:
-- `docs/ethics/` directory for all ethics documentation
 - Decision log recording all ethical considerations and choices
 - Stakeholder engagement records for each project phase
 - Completed Development Phase Questionnaire before model finalisation
