@@ -15,7 +15,7 @@ COPY requirements.txt requirements.txt
 # COPY src/ .
 
 # Install requirements
-RUN pip install --no-cache-dir --ignore-installed --requirement requirements.txt
+RUN pip install --no-cache-dir --requirement requirements.txt
 
 # Switch back to non-root user (analyticalplatform)
 USER ${CONTAINER_UID}
