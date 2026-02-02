@@ -1,0 +1,4 @@
+# Ignore wheel CVE in AWS CLI bundled dependencies
+# This is in the base image's AWS CLI installation and cannot be fixed by pip
+# Tracking: https://avd.aquasec.com/nvd/cve-2026-24049
+CVE-2026-24049
