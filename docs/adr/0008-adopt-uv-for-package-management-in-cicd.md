@@ -37,8 +37,8 @@ We will adopt **uv** as the package management and execution layer within GitHub
 
 - name: Install dependencies
   run: |
-    uv pip install -r requirements.txt
-    uv pip install -r requirements-dev.txt
+    uv pip install --system -r requirements.txt
+    uv pip install --system -r requirements-dev.txt
 
 - name: Run unit tests
   run: uv run pytest tests/unit/ --verbose
@@ -47,7 +47,7 @@ We will adopt **uv** as the package management and execution layer within GitHub
 **Compatibility notes:**
 
 - For projects using `pyproject.toml`: Can use `uv sync --all-extras --dev` for even simpler dependency management
-- For projects using `requirements.txt`: Continue using `uv pip install -r requirements.txt` for drop-in pip replacement
+- For projects using `requirements.txt`: Use `uv pip install --system -r requirements.txt` in CI (the `--system` flag installs into the runner's Python environment without requiring a virtual environment)
 - Local development: Developers can use `uv run` to execute commands, ensuring consistency between local and CI environments
 
 **Why not adopt uv everywhere?**
@@ -87,11 +87,17 @@ The Analytical Platform VSCode and RStudio instances support venv and pip as sta
 
 This decision was driven by community feedback from multiple MoJ data science teams who have successfully used uv in production. The implementation maintains backward compatibility while providing immediate performance improvements in CI/CD workflows.
 
-For local testing with uv:
+For local testing with uv (optional):
 
 ```bash
 # Install uv (first time only)
 curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Create a virtual environment
+uv venv
+
+# Activate it
+source .venv/bin/activate  # On macOS/Linux
 
 # Install dependencies
 uv pip install -r requirements-dev.txt
@@ -99,5 +105,7 @@ uv pip install -r requirements-dev.txt
 # Run tests
 uv run pytest tests/unit/ --verbose
 ```
+
+**Note**: In CI/CD (GitHub Actions), we use `uv pip install --system` because the runner environment is already isolated and doesn't require a virtual environment. For local development, create a venv first or continue using the standard pip workflow.
 
 See [uv documentation](https://docs.astral.sh/uv/) for more details.
