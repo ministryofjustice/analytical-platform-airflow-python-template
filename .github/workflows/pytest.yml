@@ -17,10 +17,18 @@ jobs:
         with:
           enable-cache: true
 
+      # Install from lock file (--dev includes dev dependencies), otherwise falls
+      # back to pip install from requirements.txt and requirements-dev.txt if they exist
       - name: Install dependencies
         run: |
-          uv pip install --system -r requirements.txt
-          uv pip install --system -r requirements-dev.txt
+          if [ -f uv.lock ]; then
+            uv sync --dev
+          else
+            uv pip install --system -r requirements.txt
+            if [ -f requirements-dev.txt ]; then
+              uv pip install --system -r requirements-dev.txt
+            fi
+          fi
 
       - name: Run unit tests
         run: uv run pytest tests/unit/ --verbose
