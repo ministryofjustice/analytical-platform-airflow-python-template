@@ -97,10 +97,11 @@ pre-commit run --all-files  # Run manually
 
 ```bash
 # Using uv (recommended - faster dependency installation)
+uv venv && source .venv/bin/activate
 uv pip install -r requirements-dev.txt
 uv run pytest tests/              # Python tests (unit, integration, e2e)
 
-# Or using pip
+# Or using standard pip
 pytest tests/              # Python tests (unit, integration, e2e)
 ```
 
