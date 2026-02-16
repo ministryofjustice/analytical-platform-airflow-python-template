@@ -1,2 +1,4 @@
 adr-tools-python
 pre-commit
+pytest
+pytest-cov
