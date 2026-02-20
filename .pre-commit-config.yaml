@@ -16,17 +16,19 @@ repos:
         description: Check YAML files for syntax errors
       - id: check-json
         description: Check JSON files for syntax errors
-      #- id: detect-private-key
-      #  description: Detect private keys in code
+      - id: detect-private-key
+        description: Detect private keys in code
   - repo: https://github.com/kynan/nbstripout
     rev: 0.8.1
     hooks:
       - id: nbstripout
-  - repo: https://github.com/psf/black
-    rev: 25.9.0  # Use the latest stable version
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.15.2
     hooks:
-      - id: black
-        args: ["--line-length=100"]
+      - id: ruff
+        description: Python linting (replaces flake8 and bandit)
+      - id: ruff-format
+        description: Python formatting (replaces black)
   - repo: https://github.com/Yelp/detect-secrets
     rev: v1.5.0
     hooks:
@@ -34,19 +36,6 @@ repos:
         args: ['--baseline', '.secrets.baseline', '--exclude-files', '.*\.log$|.*\.json$']
         exclude: ^\.secrets\.baseline$
         description: Detect secrets like API keys, passwords, and tokens
-  - repo: https://github.com/pycqa/flake8
-    rev: 7.3.0
-    hooks:
-      - id: flake8
-        args: ['--max-line-length=110', '--extend-ignore=E203,W503']
-        description: Python linting for style and potential errors
-  - repo: https://github.com/PyCQA/bandit
-    rev: 1.8.6
-    hooks:
-      - id: bandit
-        args: ['--skip=B101,B601']
-        description: Security linter for Python code
-        additional_dependencies: ['pbr']
   # R styling and linting hooks removed - can be added per-project if needed
   # Requires renv setup. See ADR 0005 for R testing approach.
   # - repo: https://github.com/lorenzwalthert/precommit
