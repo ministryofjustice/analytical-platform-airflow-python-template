@@ -39,7 +39,7 @@ The pre-commit configuration includes:
 **Python:**
 
 - Ruff (formatting, linting, and security linting — replaces Black, Flake8, and Bandit)
-    - This was chosen over a combination of Black, Flake8, and Bandit for simplicity and performance. Ruff can be configured to cover all the same checks with a single tool, reducing complexity and improving speed. Out of the box, we enable ruff's E, F, W, and S rules for comprehensive linting, while ignoring S101 to allow assertion patterns that are acceptable in our codebases.
+    - This was chosen over a combination of Black, Flake8, and Bandit for simplicity and performance. We enable ruff's E, F, W, and S rules for comprehensive linting, while ignoring S101 to allow assertion patterns that are acceptable in our codebases.
     - https://github.com/moj-analytical-services/data-science-template/issues/24
 
 **Secrets detection:**
