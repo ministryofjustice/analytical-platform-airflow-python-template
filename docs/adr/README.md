@@ -114,7 +114,7 @@ Examples for this template:
 
 ### Good ADR titles
 
-- "Use Black for Python code formatting"
+- "Use Ruff for Python code formatting and linting"
 - "Adopt virtual environments for dependency isolation"
 - "Implement pre-commit hooks for code quality"
 - "Use SQLFluff for SQL linting"
