@@ -70,7 +70,7 @@ We promote using [GitHub flow](https://guides.github.com/introduction/flow/) for
 Other git workflows (like Gitflow) can be used for larger projects requirirng governance.
 
 - [GitFlow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) - A more structured workflow with separate branches for features, releases, and hotfixes. Suitable for larger projects with multiple contributors and a need for clear release management.
-- [GitLab Flow](https://about.gitlab.com/topics/version-control/what-is-gitlab-flow/) - Combines feature-driven development with issue tracking and CI/CD. Ideal for teams using GitLab for project management and continuous integration.
+- [GitLab Flow](https://about.gitlab.com/topics/version-control/what-is-gitlab-flow/) - Combines feature-driven development with CI/CD. Ideal for teams with a focus on long term support for releases.
 
 If you do decide to use a different workflow, creating an ADR to document the rationale and process is recommended to ensure clarity and consistency across the team and future contributors.
 
