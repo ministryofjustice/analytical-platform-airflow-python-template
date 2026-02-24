@@ -30,6 +30,50 @@ We welcome contributions and suggestions! Here's how you can help:
    adr-new "Your decision title"
    ```
 
+#### GitHub Flow
+
+```mermaid
+gitGraph
+   commit id: "Initial commit"
+
+   branch feature-1
+   checkout feature-1
+   commit id: "Add data ingestion pipeline"
+   commit id: "Implement validation for input dataset"
+
+   checkout main
+   merge feature-1
+
+   branch feature-2
+   checkout feature-2
+   commit id: "Add feature engineering module"
+   commit id: "Train baseline classification model"
+
+   checkout main
+   branch hotfix
+   checkout hotfix
+   commit id: "Fix edge case in data validation logic"
+
+   checkout main
+   merge hotfix
+
+   checkout feature-2
+   merge main
+   commit id: "Resolve validation logic conflict"
+
+   checkout main
+   merge feature-2
+```
+
+We promote using [GitHub flow](https://guides.github.com/introduction/flow/) for all contributions to ensure a smooth and collaborative development process without too much administrative overhead.
+
+Other git workflows (like Gitflow) can be used for larger projects requirirng governance.
+
+- [GitFlow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) - A more structured workflow with separate branches for features, releases, and hotfixes. Suitable for larger projects with multiple contributors and a need for clear release management.
+- [GitLab Flow](https://about.gitlab.com/topics/version-control/what-is-gitlab-flow/) - Combines feature-driven development with CI/CD. Ideal for teams with a focus on long term support for releases.
+
+If you do decide to use a different workflow, creating an ADR to document the rationale and process is recommended to ensure clarity and consistency across the team and future contributors.
+
 ### Filling in the Playbook
 
 The purpose of the [MoJ Data Science and AI Playbook](https://justiceuk.sharepoint.com/:x:/s/DataEngineeringDataScience/IQBDMxjlHr8lS7_RCPgEvjuIASQy37cBpga9N6B3nGMsyEw?e=dRsrNw) is to document and prompt the different stages of a data science project, including completing the AI & Data Science Ethics Framework process.
