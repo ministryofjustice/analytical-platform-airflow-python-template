@@ -67,7 +67,7 @@ gitGraph
 
 We promote using [GitHub flow](https://guides.github.com/introduction/flow/) for all contributions to ensure a smooth and collaborative development process without too much administrative overhead.
 
-Other git workflows (like Gitflow) can be used for larger projects requirirng governance.
+Other git workflows (like GitFlow) can be used for larger projects requiring tighter governance controls.
 
 - [GitFlow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) - A more structured workflow with separate branches for features, releases, and hotfixes. Suitable for larger projects with multiple contributors and a need for clear release management.
 - [GitLab Flow](https://about.gitlab.com/topics/version-control/what-is-gitlab-flow/) - Combines feature-driven development with CI/CD. Ideal for teams with a focus on long term support for releases.
