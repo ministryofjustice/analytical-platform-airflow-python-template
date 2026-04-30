@@ -3,23 +3,60 @@ version: 2
 
 updates:
   - package-ecosystem: "github-actions"
-    directory: "/"
-    schedule:
-      interval: "daily"
     commit-message:
+      include: "scope"
       prefix: ":dependabot: github-actions"
-      include: "scope"
+    cooldown:
+      default-days: 7
+      exclude:
+        - "ministryofjustice/analytical-platform-airflow-github-actions*"
+    directory: "/"
+    groups:
+      analytical-platform-airflow-github-actions:
+        patterns:
+          - "ministryofjustice/analytical-platform-airflow-github-actions*"
+    open-pull-requests-limit: 15
+    schedule:
+      interval: "daily"
   - package-ecosystem: "docker"
-    directory: "/"
-    schedule:
-      interval: "daily"
     commit-message:
+      include: "scope"
       prefix: ":dependabot: docker"
-      include: "scope"
-  - package-ecosystem: "pip"
+    cooldown:
+      default-days: 7
+      exclude:
+        - "ghcr.io/ministryofjustice/analytical-platform-airflow-python-base*"
     directory: "/"
+    open-pull-requests-limit: 15
     schedule:
       interval: "daily"
+  - package-ecosystem: "pip"
     commit-message:
-      prefix: ":dependabot: pip"
       include: "scope"
+      prefix: ":dependabot: pip"
+    cooldown:
+      default-days: 7
+    directory: "/"
+    open-pull-requests-limit: 15
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "pre-commit"
+    commit-message:
+      include: "scope"
+      prefix: ":dependabot: pre-commit"
+    cooldown:
+      default-days: 7
+    directory: "/"
+    open-pull-requests-limit: 15
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "uv"
+    commit-message:
+      include: "scope"
+      prefix: ":dependabot: uv"
+    cooldown:
+      default-days: 7
+    directory: "/"
+    open-pull-requests-limit: 15
+    schedule:
+      interval: "daily"
