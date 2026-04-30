@@ -24,6 +24,8 @@ updates:
       prefix: ":dependabot: docker"
     cooldown:
       default-days: 7
+      exclude:
+        - "ghcr.io/ministryofjustice/analytical-platform-airflow-python-base*"
     directory: "/"
     open-pull-requests-limit: 15
     schedule:
