@@ -12,6 +12,7 @@ jobs:
   scan-container:
     permissions:
       contents: read
+      id-token: write
       pull-requests: write
       security-events: write
     uses: ministryofjustice/analytical-platform-airflow-github-actions/.github/workflows/shared-scan-container.yml@ee7af2fc5379dc235ced9f93378cbca973d9e5ad # v6.0.0
