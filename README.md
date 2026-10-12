@@ -13,6 +13,7 @@ The repository comes with the following preset files:
   - Container release to Analytical Platform's ECR (`.github/workflows/release-container.yml`)
   - Container scan with Trivy (`.github/workflows/scan-container.yml`)
   - Container structure test (`.github/workflows/test-container.yml`)
+- Octo STS trust policy for Analytical Platform Airflow (`.github/chainguard/analytical-platform-airflow.sts.yaml`)
 - CODEOWNERS
 - Dependabot configuration
 - Dockerfile
@@ -55,6 +56,19 @@ The badge demonstrates that your repository is compliant with MoJ's standards. P
 ### Manage Outside Collaborators
 
 To add an Outside Collaborator to the repository, follow the guidelines detailed [here](https://github.com/ministryofjustice/github-collaborators).
+
+### Octo STS Trust Policy
+
+The `.github/chainguard/analytical-platform-airflow.sts.yaml` file is an [Octo STS](https://github.com/octo-sts/app) trust policy. It allows the Workflow Validation job in [ministryofjustice/analytical-platform-airflow](https://github.com/ministryofjustice/analytical-platform-airflow) to obtain a short-lived, read-only token for this repository, so it can fetch your `Dockerfile` and `.grype.yml` (if present) for the Grype vulnerability scan that runs when you raise a pull request to add or update your workflow.
+
+The policy is deliberately narrow:
+
+- Only tokens issued by GitHub Actions (`https://token.actions.githubusercontent.com`) are trusted
+- Only `pull_request` runs in `ministryofjustice/analytical-platform-airflow` are accepted
+- Only the `.github/workflows/workflow-validation.yml` workflow in that repository can use it
+- The token grants `contents: read` and nothing else
+
+Keep this file in place and unchanged. Removing it, renaming it, or editing the subject or claim pattern will stop the Workflow Validation job from reading your repository, and your pull request to `analytical-platform-airflow` will fail validation.
 
 ### Update CODEOWNERS
 
